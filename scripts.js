@@ -65,7 +65,7 @@ btn.addEventListener('click', () =>{
             row.appendChild(col);
         }
         row.style.display = "grid";
-        row.style.gridTemplateColumns = "repeat(16, auto)";
+        row.style.gridTemplateColumns = "repeat("+siz+", auto)";
         row.style.gridTemplateRows = "auto";
         container.appendChild(row);
     }
