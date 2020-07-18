@@ -9,8 +9,14 @@ for(let x=0; x<16; x++)
         col.style.border = "1px solid black"
         col.style.width = "75px";
         col.style.height = "75px";
+        col.id = "0";
         col.addEventListener('mouseover', () =>{
-            col.style.backgroundColor = "blue";
+            let cblack = col.id;
+            cblack++;
+            cblack--;
+            cblack += 0.1;
+            col.id = cblack;
+            col.style.backgroundColor = "rgba("+Math.round(Math.random()*255)+", "+Math.round(Math.random()*255)+", "+Math.round(Math.random()*255)+", "+cblack+")";
         });
         row.appendChild(col);
     }
@@ -49,7 +55,12 @@ btn.addEventListener('click', () =>{
             col.style.width = "75px";
             col.style.height = "75px";
             col.addEventListener('mouseover', () =>{
-                col.style.backgroundColor = "blue";
+                let cblack = col.id;
+                cblack++;
+                cblack--;
+                cblack += 0.1;
+                col.id = cblack;
+                col.style.backgroundColor = "rgba("+Math.round(Math.random()*255)+", "+Math.round(Math.random()*255)+", "+Math.round(Math.random()*255)+", "+cblack+")";
             });
             row.appendChild(col);
         }
